@@ -284,6 +284,7 @@ p { margin: 0 0 16px; color: var(--text-muted); }
   border-radius: var(--radius);
   padding: 32px;
   position: relative;
+  text-align: center;
 }
 .price-highlight {
   border: 2px solid var(--gold);
