@@ -182,7 +182,7 @@ p { margin: 0 0 16px; color: var(--text-muted); }
   display: block;
   border-radius: var(--radius);
   object-fit: cover;
-  object-position: top center;
+  object-position: center 35%;
 }
 .about-badge {
   background: var(--nude);
