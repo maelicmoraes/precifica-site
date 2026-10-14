@@ -171,6 +171,20 @@ p { margin: 0 0 16px; color: var(--text-muted); }
 }
 .two-col.reverse { grid-template-columns: 0.8fr 1.2fr; }
 
+.app-video-wrap {
+  display: flex;
+  justify-content: center;
+}
+.app-video {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 500 / 820;
+  display: block;
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: #000;
+}
+
 .about-visual {
   display: flex;
   flex-direction: column;
