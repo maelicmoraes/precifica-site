@@ -133,6 +133,15 @@ p { margin: 0 0 16px; color: var(--text-muted); }
   margin-bottom: 12px;
 }
 .eyebrow-light { color: var(--gold-light); }
+.bonus-title {
+  display: block;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  line-height: 1;
+}
 .section h2 { font-size: 30px; }
 .single-phrase { font-size: 26px; max-width: 640px; margin: 0 auto; }
 .light { color: var(--white); }
@@ -383,4 +392,5 @@ p { margin: 0 0 16px; color: var(--text-muted); }
   .pricing-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 30px; }
   .section h2 { font-size: 26px; }
+  .bonus-title { font-size: 34px; }
 }
