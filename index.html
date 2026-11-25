@@ -427,6 +427,23 @@ src="https://www.facebook.com/tr?id=912333024518049&ev=PageView&noscript=1"/></n
 </script>
 
 <script>
+// Leva a marcação do anúncio (utm) para o checkout, para a venda mostrar a origem na Hotmart.
+(function () {
+  var q = new URLSearchParams(location.search);
+  function limpar(v) { return (v || '').replace(/[^A-Za-z0-9_-]+/g, '-').slice(0, 100); }
+  var src = limpar([q.get('utm_source'), q.get('utm_content')].filter(Boolean).join('_'));
+  var sck = limpar(q.get('utm_campaign'));
+  if (!src && !sck) return;
+  document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function (a) {
+    var u = new URL(a.href);
+    if (src) u.searchParams.set('src', src);
+    if (sck) u.searchParams.set('sck', sck);
+    a.href = u.toString();
+  });
+})();
+</script>
+
+<script>
 document.addEventListener('click', function (e) {
   var alvo = e.target.closest('a[href*="pay.hotmart.com"]');
   if (alvo && window.fbq) { fbq('track', 'InitiateCheckout'); }
